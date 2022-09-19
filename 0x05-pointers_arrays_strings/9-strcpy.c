@@ -1,12 +1,22 @@
-#include "main.h"
+
+#include "holberton.h"
 
 /**
- * reset_to_98 - resets value of pointer to 98
- * @n: pointer to reset to 98
+ * _strcpy - Copies a string pointed to by @src, including the
+ *           terminating null byte, to a buffer pointed to by @dest.
+ * @dest: A buffer to copy the string to.
+ * @src: The source string to copy.
  *
- * Return: void
+ * Return: A pointer to the destination string @dest.
  */
-void reset_to_98(int *n)
+char *_strcpy(char *dest, char *src)
 {
-	*n = 98;
+int index = 0;
+
+while (src[index])
+{
+dest[index] = src[index];
+index++;
+}
+return (dest);
 }
