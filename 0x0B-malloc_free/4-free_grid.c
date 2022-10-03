@@ -1,18 +1,36 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
-* free_grid - frees a 2d array
-*@grid:memory block to be freed
-*@height:height of the array
-*Return:returns void
-*/
-
-void free_grid(int **grid, int height)
+  * _strdup - Duplicate a string
+  * @str: the string to duplicate
+  *
+  * Return: the string duplicated
+  */
+char *_strdup(char *str)
 {
-	int i;
+	int a = 0, i = 1;
+	char *s;
 
-	for (i = 0; i < height; i++)
-		free(grid[i]);
+	if (str == NULL)
+		return (NULL);
 
-	free(grid);
+	while (str[i])
+	{
+		i++;
+	}
+
+	s = malloc((sizeof(char) * i) + 1);
+
+	if (s == NULL)
+		return (NULL);
+
+	while (a < i)
+	{
+		s[a] = str[a];
+		a++;
+	}
+
+	s[a] = '\0';
+	return (s);
 }
