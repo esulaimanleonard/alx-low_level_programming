@@ -20,7 +20,6 @@ va_start(li, n);
 for (i = 0; i < n; i++)
 {
 
-
 printf("%d", va_arg(li, int));
 
 if (i != (n - 1) && separator != NULL)
